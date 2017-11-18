@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+
+</body>
+</html>
+<div class="input-group input-group-lg">
+	<span class="input-group-addon" id="sizing-addon1">@</span>
+	<input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon1">
+</div>
+
+<div class="input-group">
+	<span class="input-group-addon" id="sizing-addon2">@</span>
+	<input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+</div>
+
+<div class="input-group input-group-sm">
+	<span class="input-group-addon" id="sizing-addon3">@</span>
+	<input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon3">
+</div>
+
+<script>
+	function callApiWith(query, page, start = null, end = null) {
+		var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+		url += '?' + $.param({
+			'api-key': "b16df27403ac4184b8851d932e2396a9",
+			q: query,
+			page: page
+		});
+		debugger;
+		return $.ajax({
+			url: url,
+			method: 'GET',
+		})
+	}
+
+	callApiWith('example', 1)
+	.done(function(result) {
+		console.log(result);
+	}).fail(function(err) {
+		throw err;
+	});
+</script>
