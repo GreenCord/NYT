@@ -15,15 +15,40 @@
 
   <body>
 <nav class="navbar navbar-inverse">
-  ...
+  <h1 style="color: white; text-align: center;">NEY YORK TIMES SEARCH</h1>
 </nav>
-
-<form class="navbar-form navbar-left" role="search">
-  <div class="form-group">
-    <input type="text" class="form-control" placeholder="Search">
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Search Parameters</h3>
   </div>
+  <div class="panel-body">
+    <h3>Search Term:</h3>
+   <input type="text" class="form-control" aria-describedby="basic-addon1">
+  <br />
+  <h3>Number of Records to Retrieve:</h3>
+   <input type="text" class="form-control" aria-describedby="basic-addon1">
+  <br />
+  <h3>Start Year(Optional):</h3>
+   <input type="text" class="form-control" aria-describedby="basic-addon1">
+  <br />
+  <h3>End Year(Optional):</h3>
+   <input type="text" class="form-control" aria-describedby="basic-addon1">
+   <br />
   <button id="search" type="submit" class="btn btn-default">Submit</button>
+  <button id="clear" type="clear" class="btn btn-default">Clear Results</button>
 </form>
+  </div>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Top Articles</h3>
+  </div>
+  <div id="articles-here" class="panel-body">
+   
+  </div>
+</div>
+
   <!--my link to the jQuery library-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="assets/javascript/search.js"></script>
